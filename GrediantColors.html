@@ -137,8 +137,7 @@
         const hexValue2 = () => {
             let hex = hexValues();
             color2 = hex;
-            document.body.style.backgroundImage = `linear-gradient(to right top,${color1}, ${color2}) `;
-            document.copyClr.style.padding='15px';
+            document.body.style.backgroundImage = `linear-gradient(to right top,${color1}, ${color2} )`;
             copyClr.innerText = ` linear-gradient(to right top,${color1}, ${color2}) `;
         }
         btn1.addEventListener('click', hexValue1)
