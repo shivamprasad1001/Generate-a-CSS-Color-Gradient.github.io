@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate a CSS Color Gradient</title>
+    <style>
+        *{
+            overflow: hidden;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            background-image:linear-gradient(to right top,#45e161, #7620cd);
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+        }
+        section{
+            height: 52vh;
+            margin-top: 189px;
+            padding-top: 10px;
+            padding-left: 85px;
+            padding-right: 10px;
+            margin-bottom: 200px;
+        }
+        h1{
+            color: white;
+            font-size: 30px;
+            margin-bottom: 100px;
+        }
+        #mybtn1,#mybtn2{
+            width: 200px;
+            height: 50px;
+            background-color: green;
+            border: none;
+            border-radius: 20px;
+            box-shadow: 5px 5px 10px #0000009a;
+            font-family:Lucida ;
+            font-size: 20px;
+            font-family:monospace;
+            font-weight: 700;
+            cursor: pointer;
+
+            
+        }
+        #mybtn1
+        {
+            background-color: #001534;
+            color: white;
+
+        }
+        #mybtn2
+        {
+            margin-left: 20px;
+            background-color: #A8EB12;
+            color: black;
+
+        }
+       .colorCodeBox{
+        margin-top: 20px;
+        width: 80%;
+        height: 30px;
+        margin-left: 5%;
+        margin-bottom: 10px;
+        border-radius: 30px;
+        border-left: 2px solid white;
+        color: white;font-family: monospace;
+        background-color: rgba(0, 0, 0, 0.122);
+        padding: 15px;
+       }
+       p{
+        
+        font-family: monospace;
+        font-size: 13px;
+       
+
+        
+       }
+       h6{
+        padding: 5px 10px ;
+        width: 100px;
+        border-radius:10px;
+        margin-top: 20px;
+        margin-left: 30px;
+        margin-bottom: -20px;
+        color: white;
+        font-family: monospace;
+        font-size: 12px;
+
+       }
+
+    </style>
+</head>
+<body>
+    <section> 
+    <h1>Generate a CSS Color Gradient</h1>
+       <button id="mybtn1">btn1</button>
+       <button id="mybtn2">btn2</button>
+       <h6>click to copy</h6>
+       <div class="colorCodeBox">
+       
+            <p>linear-gradient(to right top,#45e161, #7620cd)
+ 
+            </p>
+       </div>
+    </section>
+
+    <script>
+        let btn1 = document.getElementById("mybtn1");
+        let btn2 = document.getElementById("mybtn2");
+        let copyClr = document.querySelector('.colorCodeBox');
+        let color1= '#fff';
+        let color2= '#000';
+        
+
+        const hexValues = () => {
+           const hexColorValue = '0123456789abcdef';
+           let hexColor = '#';
+           for(let i=0; i<6; i++){
+            let randomIndex = Math.floor(Math.random() * hexColorValue.length);
+            hexColor = hexColor+hexColorValue[randomIndex];
+            
+           }
+           console.log(hexColor);
+           return hexColor;
+        }
+        
+
+        const hexValue1 = () => {
+            let hex = hexValues();
+            color1 = hex;
+            document.body.style.backgroundImage = `linear-gradient(to right top,${color1}, ${color2} )`;
+            copyClr.innerText = ` linear-gradient(to right top,${color1}, ${color2}) `;
+        }
+        const hexValue2 = () => {
+            let hex = hexValues();
+            color2 = hex;
+            document.body.style.backgroundImage = `linear-gradient(to right top,${color1}, ${color2}) `;
+            document.copyClr.style.padding='15px';
+            copyClr.innerText = ` linear-gradient(to right top,${color1}, ${color2}) `;
+        }
+        btn1.addEventListener('click', hexValue1)
+        btn2.addEventListener('click', hexValue2)
+        copyClr.addEventListener('click', ()=>{
+            navigator.clipboard.writeText(copyClr.innerText);
+            alert('Copied to clipboard');
+        });
+    </script>
+</body>
+</html>
