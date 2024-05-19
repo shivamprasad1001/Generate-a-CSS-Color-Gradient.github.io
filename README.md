@@ -39,10 +39,6 @@ I am a computer science student specializing in Machine Learning. In addition to
 
 I welcome contributions to improve this project! Feel free to submit a pull request or open an issue to discuss any changes or enhancements.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
 ## Contact
 
 If you have any questions or feedback, please reach out via GitHub issues.
