@@ -7,6 +7,7 @@ Welcome to the GitHub repository for the "Generate-a-CSS-Color-Gradient" project
 
 The "Generate-a-CSS-Color-Gradient" tool is a web application that helps users generate custom CSS gradients by selecting colors and adjusting various settings. The tool provides the CSS code for the gradient, which users can then copy and use in their own projects.
 
+You can check out the live version of our app [here](https://shivamprasad1001.github.io/Generate-a-CSS-Color-Gradient.github.io/).
 ## Features
 
 - **Color Selection**: Choose from a color palette or enter custom color codes.
